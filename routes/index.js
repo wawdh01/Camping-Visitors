@@ -11,9 +11,6 @@ router.get("/", (req, res)=>{
   res.render("landing");
 });
 
-//=====================================
-//AUTH Routes
-//======================================
 router.get("/register", (req,res)=>{
   res.render("register", {page: 'register'});
 })
@@ -40,12 +37,15 @@ router.post("/register",(req,res)=>{
 });
 
 router.get("/login", (req,res)=>{
-  res.render("login", {page: 'login'});
+  res.render("login", {page: 'login', failureMessage: req.flash('error')});
 });
 router.post("/login", passport.authenticate("local",{
   successRedirect: "/campgrounds",
-  failureRedirect: "/login"
-}),(req,res)=>{});
+  failureRedirect: "/login",
+  failureFlash: true
+}),(req,res)=>{
+  //req.flash('error', "Invalid Username or Password ");
+});
 
 router.get("/logout", (req,res)=>{
   req.logout();
