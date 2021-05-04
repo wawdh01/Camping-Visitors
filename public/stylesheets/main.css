@@ -23,3 +23,14 @@ width: 100%;
     1px 25px 10px rgba(16,16,16,0.2),
     1px 10px 20px rgba(16,16,16,0.4);
 }
+
+.jadu{
+  animation-name: example;
+  animation-duration: 3s;
+  animation: example 2s infinite;
+}
+
+@keyframes example {
+  from {}
+  to {margin-left:-20px;}
+}
