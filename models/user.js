@@ -9,7 +9,8 @@ const userschema = new mongoose.Schema({
   email: {type: String,  unique: true, required: true},
   resetPasswordToken: String,
   resetPasswordExpires: Date,
-  isadmin : {type: Boolean, default: false}
+  isadmin : {type: Boolean, default: false},
+  description: {type: String}
 });
 userschema.plugin(passportlocalmongoose);
 module.exports = mongoose.model("User", userschema);

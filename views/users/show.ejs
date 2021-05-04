@@ -1,17 +1,18 @@
 <%- include ('../partials/header') %>
-<div class="row" style="background: url('https://www.royalcaribbeanblog.com/sites/default/files/fb/Zoom_Background%2012%20-%20Beach%20Sunset.jpg');">
+<div class="row" style="background-color: rgba(12, 56, 93, 0.8); border-radius: 20px;">
   <div class="col-md-4">
-      <h1><%=user.username + " "  + user.lastname%></h1>
+      <h1 style="color: chartreuse ;"><%=user.username%></h1>
+      <h3 style="color: cornsilk;"><%=user.firstname + " "  + user.lastname%></h3>
     <div class="thumbnail" style="background-color: burlywood;">
       <img src="<%= user.avatar %>" alt="user profile image">
       <div class="caption">
         <a href="mailto:<%=user.email%>"><%=user.email%></a>
       </div>
     </div>
-    <p style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p style="text-align:center; color: cyan;"><%=user.description%></p>
   </div>
   <div class="col-md-8">
-    <h3 style="font-size:3.5rem;"><%=user.username%>'s campgrounds</h3>
+    <h3 style="font-size:3.5rem; color: darkkhaki;"><%=user.username%>'s Camping Place's</h3>
     <ul>
       <%campgrounds.forEach((campground)=>{ %>
         <li><a href="/campgrounds/<%= campground.id%>" style="color:OrangeRed;font-size:2.5rem;font-family: 'Dancing Script', cursive;" ><%=campground.name%></a></li>

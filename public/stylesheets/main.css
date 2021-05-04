@@ -26,11 +26,13 @@ width: 100%;
 
 .jadu{
   animation-name: example;
-  animation-duration: 3s;
-  animation: example 2s infinite;
+  animation-duration: 4s;
+  animation: example 4s;
+  -webkit-animation-fill-mode: forwards;
 }
 
-@keyframes example {
-  from {}
-  to {margin-left:-20px;}
+@-webkit-keyframes example {
+  100% {
+    margin-left:200px;
+  }
 }

@@ -20,7 +20,9 @@ router.post("/register",(req,res)=>{
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       email: req.body.email,
-      avatar: req.body.avatar});
+      avatar: req.body.avatar,
+      description:req.body.description,
+    });
   if(req.body.admincode === "secretcode123"){
     newuser.isadmin = true;
   }
