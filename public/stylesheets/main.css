@@ -33,6 +33,12 @@ width: 100%;
 
 @-webkit-keyframes example {
   100% {
-    margin-left:200px;
+    margin-left:30%;
+  }
+}
+
+@media screen and (max-width: 500px;) {
+  .dd{
+    font-size: 6vw;
   }
 }
