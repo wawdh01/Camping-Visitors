@@ -37,8 +37,13 @@ width: 100%;
   }
 }
 
-@media screen and (max-width: 500px;) {
+@media screen and (max-width: 500px) {
   .dd{
     font-size: 6vw;
+  }
+  @-webkit-keyframes example {
+    100% {
+      margin-left: 0px;
+    }
   }
 }
